@@ -1,0 +1,20 @@
+# pid fd target — created as /proc/<pid>/fd/<fd> symlinks by the test
+# (git can't store socket:[N] symlinks portably). "-" marks an fd directory
+# that is unreadable (another user's process).
+203 0 /dev/null
+203 1 pipe:[555]
+203 3 socket:[1001]
+203 4 socket:[1002]
+203 5 socket:[1008]
+203 6 socket:[1009]
+203 7 socket:[1010]
+203 8 socket:[notanumber]
+203 9 socket:[1001
+210 3 socket:[1003]
+211 3 socket:[1004]
+300 20 socket:[1005]
+301 20 socket:[1005]
+400 -
+500 7 socket:[1007]
+502 24 socket:[1012]
+201 0 /dev/pts/3

@@ -1,0 +1,43 @@
+name         infra
+description  Redis + ClickHouse (docker)
+kind         config
+state        exited · docker up
+pid          -
+started      2026-11-07 07:54:12 UTC
+ports        6379 127.0.0.1 docker sag-redis
+             8123 127.0.0.1 docker sag-clickhouse
+last ports   6379,8123
+cmd          just infra
+cwd          .
+env          -
+log          .logs/infra.log
+docker       search-api-gateway-local
+containers   infra/clickhouse sag-clickhouse running healthy 8123
+             infra/redis      sag-redis      running healthy 6379
+
+name         api
+kind         config
+state        running
+pid          41502
+uptime       2h10m
+started      2026-11-07 08:04:12 UTC
+ports        3001 0.0.0.0 pid 41530 (bun)
+last ports   3001
+cmd          just api
+running cmd  just api  (rov.yaml changed: restart to apply)
+cwd          .
+env          PORT
+log          .logs/api.log
+
+name         worker-rust
+kind         config
+state        crashed(101)
+pid          -
+started      2026-11-07 09:14:12 UTC
+ports        -
+last ports   9101
+cmd          just worker-rust
+cwd          .
+env          -
+log          .logs/worker-rust.log
+

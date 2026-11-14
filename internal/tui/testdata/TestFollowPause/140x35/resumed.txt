@@ -1,0 +1,35 @@
+ rov ▸ myapp   ~/myapp   tmux rov-myapp-3f9a1c2e                                                              ● 5  ▲ 0  ✗ 1  ○ 2   10:14:12 
+╭─ processes ──────────────────────────╮╭─ gateway ────────────────────────────────────────────────────────────────────────────────────────╮
+│ ● infra        up 2/2    :6379 :8123 ││ running · pid 41233 · up 2h13m · :8080 · cwd . · just gateway                                    │
+│   just infra                         ││ search gateway                                                                                   │
+│   ├ clickhouse healthy         :8123 ││──────────────────────────────────────────────────────────────────────────────────────────────────│
+│   └ redis      healthy         :6379 ││   95  08:02:34 INF search q="rust tui" took=194ms results=4                                      │
+│▌● gateway                      :8080 ││   96  08:02:35 INF search q="rust tui" took=195ms results=5                                      │
+│▌  just gateway                       ││   97  08:02:36 INF provider ready name=brave latency=106ms                                       │
+│ ● tracking               :8090 :8091 ││   98  08:02:37 WRN upstream slow provider=serper p95=797ms                                       │
+│   just tracking                      ││   99  08:02:38 INF search q="rust tui" took=198ms results=8                                      │
+│ ✗ worker-rust  crashed 101           ││  100  08:02:39 INF search q="rust tui" took=199ms results=0                                      │
+│   just worker-rust           (:9101) ││  101  08:02:40 INF search q="rust tui" took=200ms results=1                                      │
+│ ● api                          :3001 ││  102  08:02:41 INF provider ready name=brave latency=111ms                                       │
+│   just api                 ◆ changed ││  103  08:02:42 INF search q="rust tui" took=202ms results=3                                      │
+│ ○ panel        absent                ││  104  08:02:43 INF search q="rust tui" took=203ms results=4                                      │
+│   just panel                         ││  105  08:02:44 INF search q="rust tui" took=204ms results=5                                      │
+│ ── ad-hoc ────────────────────────── ││  106  08:02:45 INF search q="rust tui" took=205ms results=6                                      │
+│ ○ old-mock     stopped               ││  107  08:02:46 INF provider ready name=brave latency=116ms                                       │
+│   node old.js               (:12000) ││  108  08:02:47 WRN upstream slow provider=serper p95=807ms                                       │
+│ ● mock-stripe                 :12111 ││  109  08:02:48 INF search q="rust tui" took=208ms results=0                                      │
+│   node scripts/mock-stripe.js     4m ││  110  08:02:49 INF search q="rust tui" took=209ms results=1                                      │
+│ ── docker ────────────────────────── ││  111  08:02:50 INF search q="rust tui" took=210ms results=2                                      │
+│ ○ scratch      down                  ││  112  08:02:51 INF provider ready name=brave latency=121ms                                       │
+│   └ db         exited                ││  113  08:02:52 INF search q="rust tui" took=212ms results=4                                      │
+│                                      ││  114  08:02:53 INF search q="rust tui" took=213ms results=5                                      │
+│                                      ││  115  08:02:54 INF search q="rust tui" took=214ms results=6                                      │
+│                                      ││  116  08:02:55 INF search q="rust tui" took=215ms results=7                                      │
+│                                      ││  117  08:02:56 INF provider ready name=brave latency=126ms                                       │
+│                                      ││  118  08:02:57 WRN upstream slow provider=serper p95=817ms                                       │
+│                                      ││  119  08:02:58 INF search q="rust tui" took=218ms results=1                                      │
+│                                      ││  120  08:02:59 INF search q="rust tui" took=219ms results=2                                      │
+│                                      ││  121  ERR late line one                                                                          │
+│                                      ││  122  ERR late line two                                                                          │
+╰──────────────────────────────────────╯╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+  OUTPUT  j/k scroll  G follow  / search  n/N match  w wrap  # lines  p prev run  space start/stop  r restart  a attach  ? help  q quit     

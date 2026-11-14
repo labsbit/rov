@@ -1,0 +1,20 @@
+ rov ▸ myapp                                    ●5 ▲0 ✗1 ○2  10:14:12 
+╭─ processes ──────────────╮╭─ gateway ──────────────────────────────╮
+│ ● infra        up 2/2    ││ running · pid 41233 · up 2h13m · :808… │
+│  ╭─ edit gateway ───────────────────────────────────────────────╮  │
+│  │                                                              │──│
+│▌●│  Name         gateway                                        │  │
+│ ●│  Command                                                     │" │
+│ ✗│               ✗ the command is required                      │  │
+│ ●│▌ Working dir  .                                              │" │
+│ ○│  Env                                                         │  │
+│ ─│                                                              │e │
+│ ○│               (one KEY=VALUE per line)                       │  │
+│ ●│  Description  search gateway                                 │i │
+│ ─│  Docker       ‹ — none — ›                                   │  │
+│ ○│                                                              │" │
+│  │                                    esc cancel   ctrl+s save  │  │
+│  ╰──────────────────────────────────────────────────────────────╯" │
+│                          ││        took=139ms results=3            │
+╰──────────────────────────╯╰────────────────────────────────────────╯
+  FORM  tab next  shift+tab back  ctrl+s save  esc cancel             

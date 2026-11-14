@@ -1,0 +1,11 @@
+{"c":{"ID":"aaa1","Names":"proj-web-1","Image":"nginx","Labels":"ignored","State":"exited","Status":"Exited (0) 3 hours ago","HealthStatus":"","Ports":""},"project":"proj","service":"web","working_dir":"/home/dev/myapp/apps/web"}
+{"c":{"ID":"aaa2","Names":"proj-db-1","Image":"postgres:16","State":"running","Status":"Up 5 seconds (health: starting)","HealthStatus":"starting","Ports":"0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp"},"project":"proj","service":"db","working_dir":"/home/dev/myapp/apps/web"}
+{"c":{"ID":"aaa3","Names":"proj-cache-1","Image":"redis","State":"running","Status":"Up 1 minute (unhealthy)","HealthStatus":"unhealthy","Ports":"127.0.0.1:6380->6379/tcp"},"project":"proj","service":"cache","working_dir":"/home/dev/myapp/apps/web/"}
+{"c":{"ID":"bbb1","Names":"old-api-1","Image":"api","Status":"Up 3 minutes (healthy)","Ports":":::7000->7000/tcp, 0.0.0.0:7000->7000/tcp"},"project":"old","service":"api","working_dir":"/home/dev/myapp"}
+{"c":{"ID":"bbb2","Names":"old-paused-1","Image":"api","Status":"Up 3 minutes (Paused)","Ports":""},"project":"old","service":"paused","working_dir":"/home/dev/myapp"}
+{"c":{"ID":"bbb3","Names":"old-gone-1","Image":"api","Status":"Created","Ports":""},"project":"old","service":"gone","working_dir":"/home/dev/myapp"}
+{"c":{"ID":"ccc1","Names":"sib-x-1","Image":"x","State":"running","Status":"Up 1 hour","HealthStatus":"none","Ports":"0.0.0.0:5000-5002->5000-5002/tcp, 0.0.0.0:53->53/udp"},"project":"sib","service":"x","working_dir":"/home/dev/myapp-old"}
+{"c":{"ID":"ccc2","Names":"else-y-1","Image":"y","State":"running","Status":"Up 1 hour","Ports":""},"project":"else","service":"y","working_dir":"/srv/else"}
+{"c":{"ID":"ccc3","Names":"rel-z-1","Image":"z","State":"running","Status":"Up 1 hour","Ports":""},"project":"rel","service":"z","working_dir":"relative/dir"}
+
+{"ID":"ddd1","Names":"plain-a-1,linked/alias","Image":"a","Labels":"com.docker.compose.project=plain,com.docker.compose.project.config_files=/home/dev/myapp/a.yaml,/home/dev/myapp/b.yaml,com.docker.compose.service=a,com.docker.compose.project.working_dir=/home/dev/myapp/infra","State":"Running","Status":"Up 2 hours","Health":"healthy","Ports":"127.0.0.1:9999->9999/tcp"}

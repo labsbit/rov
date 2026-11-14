@@ -1,0 +1,20 @@
+ rov ▸ myapp                                    ●5 ▲0 ✗1 ○2  10:14:12 
+╭─ processes ──────────────╮╭─ gateway ──────────────────────────────╮
+│ ● infra        up 2/2    ││ running · pid 41233 · up 2h13m · :808… │
+│   ├ clickhouse healthy   ││ search gateway                         │
+│   └ redis      healthy   ││────────────────────────────────────────│
+│▌● gateway          :8080 ││        took=133ms results=6            │
+│ ● tracking       :8090 … ││   35  08:01:34 INF search q="rust tui" │
+│ ✗ worker-rust crashed 101││        took=134ms results=7            │
+│ ● api              :3001 ││   36  08:01:35 INF search q="rust tui" │
+│ ○ panel        absent    ││        took=135ms results=8            │
+│ ── ad-hoc ────────────── ││   37  08:01:36 INF provider ready name │
+│ ○ old-mock     stopped   ││       =brave latency=46ms              │
+│ ● mock-stripe     :12111 ││   38  08:01:37 WRN upstream slow provi │
+│ ── docker ────────────── ││       der=serper p95=737ms             │
+│ ○ scratch      down      ││   39  08:01:38 INF search q="rust tui" │
+│   └ db         exited    ││        took=138ms results=2            │
+│                          ││   40  08:01:39 INF search q="rust tui" │
+│                          ││        took=139ms results=3            │
+╰──────────────────────────╯╰────────────────────────────────────────╯
+  OUTPUT  j/k scroll  G follow  ? help  q quit        /provider 11/12 

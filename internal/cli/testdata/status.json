@@ -1,0 +1,280 @@
+{
+  "project": "myapp",
+  "root": "/home/dev/myapp",
+  "socket": "rov-myapp-3f9a1c2e",
+  "processes": [
+    {
+      "name": "infra",
+      "kind": "config",
+      "state": "exited",
+      "exit_code": 0,
+      "pid": null,
+      "ports": [
+        {
+          "port": 6379,
+          "addr": "127.0.0.1",
+          "source": "docker",
+          "container": "sag-redis"
+        },
+        {
+          "port": 8123,
+          "addr": "127.0.0.1",
+          "source": "docker",
+          "container": "sag-clickhouse"
+        }
+      ],
+      "last_ports": [
+        6379,
+        8123
+      ],
+      "started_at": "2026-11-07T07:54:12Z",
+      "cmd": "just infra",
+      "cwd": ".",
+      "env_keys": [],
+      "description": "Redis + ClickHouse (docker)",
+      "changed": false,
+      "docker": "search-api-gateway-local",
+      "docker_state": "up",
+      "containers": [
+        {
+          "name": "sag-clickhouse",
+          "project": "search-api-gateway-local",
+          "service": "clickhouse",
+          "state": "running",
+          "health": "healthy",
+          "status": "Up 2 hours (healthy)",
+          "ports": [
+            {
+              "port": 8123,
+              "addr": "127.0.0.1",
+              "source": "docker",
+              "container": "sag-clickhouse"
+            }
+          ]
+        },
+        {
+          "name": "sag-redis",
+          "project": "search-api-gateway-local",
+          "service": "redis",
+          "state": "running",
+          "health": "healthy",
+          "status": "Up 2 hours (healthy)",
+          "ports": [
+            {
+              "port": 6379,
+              "addr": "127.0.0.1",
+              "source": "docker",
+              "container": "sag-redis"
+            }
+          ]
+        }
+      ],
+      "log": ".logs/infra.log"
+    },
+    {
+      "name": "gateway",
+      "kind": "config",
+      "state": "running",
+      "exit_code": null,
+      "pid": 41233,
+      "ports": [
+        {
+          "port": 8080,
+          "addr": "0.0.0.0",
+          "pid": 41301,
+          "comm": "api-gateway",
+          "source": "proc"
+        },
+        {
+          "port": 8080,
+          "addr": "::",
+          "pid": 41301,
+          "comm": "api-gateway",
+          "source": "proc"
+        }
+      ],
+      "last_ports": [
+        8080
+      ],
+      "started_at": "2026-11-07T08:01:12Z",
+      "cmd": "just gateway",
+      "cwd": ".",
+      "env_keys": [],
+      "description": "search gateway",
+      "changed": false,
+      "containers": [],
+      "log": ".logs/gateway.log"
+    },
+    {
+      "name": "tracking",
+      "kind": "config",
+      "state": "running",
+      "exit_code": null,
+      "pid": 41390,
+      "ports": [
+        {
+          "port": 8090,
+          "addr": "127.0.0.1",
+          "pid": 41402,
+          "comm": "tracking-servi",
+          "source": "proc"
+        },
+        {
+          "port": 8091,
+          "addr": "127.0.0.1",
+          "pid": 41402,
+          "comm": "tracking-servi",
+          "source": "proc"
+        }
+      ],
+      "last_ports": [
+        8090,
+        8091
+      ],
+      "started_at": "2026-11-07T08:01:12Z",
+      "cmd": "just tracking",
+      "cwd": ".",
+      "env_keys": [],
+      "description": "",
+      "changed": false,
+      "containers": [],
+      "log": ".logs/tracking.log"
+    },
+    {
+      "name": "worker-rust",
+      "kind": "config",
+      "state": "crashed",
+      "exit_code": 101,
+      "pid": null,
+      "ports": [],
+      "last_ports": [
+        9101
+      ],
+      "started_at": "2026-11-07T09:14:12Z",
+      "cmd": "just worker-rust",
+      "cwd": ".",
+      "env_keys": [],
+      "description": "",
+      "changed": false,
+      "containers": [],
+      "log": ".logs/worker-rust.log"
+    },
+    {
+      "name": "api",
+      "kind": "config",
+      "state": "running",
+      "exit_code": null,
+      "pid": 41502,
+      "ports": [
+        {
+          "port": 3001,
+          "addr": "0.0.0.0",
+          "pid": 41530,
+          "comm": "bun",
+          "source": "proc"
+        }
+      ],
+      "last_ports": [
+        3001
+      ],
+      "started_at": "2026-11-07T08:04:12Z",
+      "cmd": "just api",
+      "running_cmd": "just api",
+      "cwd": ".",
+      "env_keys": [
+        "PORT"
+      ],
+      "description": "",
+      "changed": true,
+      "containers": [],
+      "log": ".logs/api.log"
+    },
+    {
+      "name": "panel",
+      "kind": "config",
+      "state": "absent",
+      "exit_code": null,
+      "pid": null,
+      "ports": [],
+      "last_ports": [],
+      "started_at": null,
+      "cmd": "just panel",
+      "cwd": ".",
+      "env_keys": [],
+      "description": "",
+      "changed": false,
+      "containers": [],
+      "log": ".logs/panel.log"
+    },
+    {
+      "name": "old-mock",
+      "kind": "adhoc",
+      "state": "stopped",
+      "exit_code": null,
+      "pid": null,
+      "ports": [],
+      "last_ports": [
+        12000
+      ],
+      "started_at": "2026-11-07T09:14:12Z",
+      "cmd": "node old.js",
+      "cwd": "tools",
+      "env_keys": [],
+      "description": "",
+      "changed": false,
+      "containers": [],
+      "log": ".logs/old-mock.log"
+    },
+    {
+      "name": "mock-stripe",
+      "kind": "adhoc",
+      "state": "running",
+      "exit_code": null,
+      "pid": 51002,
+      "ports": [
+        {
+          "port": 12111,
+          "addr": "127.0.0.1",
+          "pid": 51002,
+          "comm": "node",
+          "source": "proc"
+        }
+      ],
+      "last_ports": [
+        12111
+      ],
+      "started_at": "2026-11-07T10:10:12Z",
+      "cmd": "node scripts/mock-stripe.js",
+      "cwd": ".",
+      "env_keys": [
+        "STRIPE_KEY"
+      ],
+      "description": "",
+      "changed": false,
+      "containers": [],
+      "log": ".logs/mock-stripe.log"
+    }
+  ],
+  "docker": {
+    "available": true,
+    "unowned": [
+      {
+        "project": "scratch",
+        "containers": [
+          {
+            "name": "scratch-db-1",
+            "project": "scratch",
+            "service": "db",
+            "state": "exited",
+            "health": "",
+            "status": "Exited (0) 3 days ago",
+            "ports": []
+          }
+        ]
+      }
+    ]
+  },
+  "warnings": [
+    "worker-rust: :9101 is held by pid 7712 (worker-search-r, not managed by rov)"
+  ]
+}

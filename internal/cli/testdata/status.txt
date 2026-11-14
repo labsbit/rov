@@ -1,0 +1,13 @@
+SERVICE      STATE        PID     PORTS        UPTIME  COMMAND
+infra        exited       -       6379,8123    -       just infra       [docker 2/2 healthy]
+gateway      running      41233   8080         2h13m   just gateway
+tracking     running      41390   8090,8091    2h13m   just tracking
+worker-rust  crashed(101) -       (9101)       -       just worker-rust
+api          running      41502   3001         2h10m   just api         [changed]
+panel        absent       -       -            -       just panel
+ad-hoc
+old-mock     stopped      -       (12000)      -       node old.js
+mock-stripe  running      51002   12111        4m      node scripts/mock-stripe.js
+docker (containers no process owns)
+scratch/db   exited       -       -            -       container scratch-db-1
+! worker-rust: :9101 is held by pid 7712 (worker-search-r, not managed by rov)
