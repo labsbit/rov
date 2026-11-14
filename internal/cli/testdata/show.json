@@ -1,0 +1,38 @@
+{
+  "name": "gateway",
+  "kind": "config",
+  "state": "running",
+  "exit_code": null,
+  "pid": 41233,
+  "ports": [
+    {
+      "port": 8080,
+      "addr": "0.0.0.0",
+      "pid": 41301,
+      "comm": "api-gateway",
+      "source": "proc"
+    },
+    {
+      "port": 8080,
+      "addr": "::",
+      "pid": 41301,
+      "comm": "api-gateway",
+      "source": "proc"
+    }
+  ],
+  "last_ports": [
+    8080
+  ],
+  "started_at": "2026-11-07T08:01:12Z",
+  "cmd": "just gateway",
+  "cwd": ".",
+  "env_keys": [],
+  "description": "search gateway",
+  "changed": false,
+  "containers": [],
+  "log": ".logs/gateway.log",
+  "lines": [
+    "listening on :8080",
+    "a <b> && c"
+  ]
+}

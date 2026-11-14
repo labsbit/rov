@@ -1,0 +1,35 @@
+ rov ▸ myapp   ~/myapp   tmux rov-myapp-3f9a1c2e                                                              ● 5  ▲ 0  ✗ 1  ○ 2   10:14:12 
+╭─ processes ──────────────────────────╮╭─ infra/redis ────────────────────────────────────────────────────────────────────────────────────╮
+│ ● infra        up 2/2    :6379 :8123 ││ ● healthy · :6379 · sag-redis · Up 2 hours (healthy)                                             │
+│   just infra                         ││ container of infra · compose project search-api-gateway-local · docker logs                      │
+│   ├ clickhouse healthy         :8123 ││──────────────────────────────────────────────────────────────────────────────────────────────────│
+│▌  └ redis      healthy         :6379 ││    1  1:M 07 Nov 2026 08:00:01.000 * Ready to accept connections tcp                             │
+│ ● gateway                      :8080 ││    2  1:M 07 Nov 2026 08:10:01.000 * DB saved on disk                                            │
+│   just gateway                       ││       ── stream ended (container stopped) ──                                                     │
+│ ● tracking               :8090 :8091 ││                                                                                                  │
+│   just tracking                      ││                                                                                                  │
+│ ✗ worker-rust  crashed 101           ││                                                                                                  │
+│   just worker-rust           (:9101) ││                                                                                                  │
+│ ● api                          :3001 ││                                                                                                  │
+│   just api                 ◆ changed ││                                                                                                  │
+│ ○ panel        absent                ││                                                                                                  │
+│   just panel                         ││                                                                                                  │
+│ ── ad-hoc ────────────────────────── ││                                                                                                  │
+│ ○ old-mock     stopped               ││                                                                                                  │
+│   node old.js               (:12000) ││                                                                                                  │
+│ ● mock-stripe                 :12111 ││                                                                                                  │
+│   node scripts/mock-stripe.js     4m ││                                                                                                  │
+│ ── docker ────────────────────────── ││                                                                                                  │
+│ ○ scratch      down                  ││                                                                                                  │
+│   └ db         exited                ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+│                                      ││                                                                                                  │
+╰──────────────────────────────────────╯╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+  LIST  space start/stop  r restart  n new  e edit  J/K move  x remove  / search  a attach  ? help  q quit                                  

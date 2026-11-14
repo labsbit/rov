@@ -1,0 +1,12 @@
+PORT   ADDR        PID    COMMAND             OWNER
+3001   0.0.0.0     41530  bun                 api
+5432   0.0.0.0     ?      ?                   -                (not visible: other user)
+6379   127.0.0.1   -      docker              infra/redis
+8080   0.0.0.0     41301  api-gateway         gateway
+8080   ::          41301  api-gateway         gateway
+8090   127.0.0.1   41402  tracking-servi      tracking
+8091   127.0.0.1   41402  tracking-servi      tracking
+8123   127.0.0.1   -      docker              infra/clickhouse
+9101   0.0.0.0     7712   worker-search-r     -
+12111  127.0.0.1   51002  node                mock-stripe
+16379  127.0.0.1   -      docker              -                (container elsewhere-redis)

@@ -1,0 +1,20 @@
+ rov ▸ myapp                                    ●5 ▲0 ✗1 ○2  10:14:12 
+╭─ ╭─ new process ────────────────────────────────────────────────╮──╮
+│ ●│                                                              │… │
+│  │  Name         Bad Name                                       │  │
+│  │               ✗ use a-z, 0-9, '-' and '_', starting with a   │──│
+│▌●│               letter or digit                                │  │
+│ ●│▌ Command      shell command                                  │" │
+│ ✗│  Working dir  .                                              │  │
+│ ●│  Env                                                         │" │
+│ ○│                                                              │  │
+│ ─│               (one KEY=VALUE per line)                       │e │
+│ ○│  Description                                                 │  │
+│ ●│  Docker       ‹ — none — ›                                   │i │
+│ ─│  Position     ‹ after gateway ›                              │  │
+│ ○│  [x] start after saving                                      │" │
+│  │                                                              │  │
+│  │                                    esc cancel   ctrl+s save  │" │
+│  ╰──────────────────────────────────────────────────────────────╯  │
+╰──────────────────────────╯╰────────────────────────────────────────╯
+  FORM  tab next  shift+tab back  ctrl+s save  esc cancel             

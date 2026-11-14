@@ -1,0 +1,20 @@
+ rov ▸ myapp                                    ●5 ▲0 ✗1 ○2  10:14:12 
+╭─ processes ──────────────╮╭─ gateway ──────────────────────────────╮
+│ ● infra        up 2/2    ││ running · pid 41233 · up 2h13m · :808… │
+│   ├ clickhouse healthy   ││ search gateway                         │
+│   └ redis      healthy   ││────────────────────────────────────────│
+│▌● gateway          :8080 ││  112  08:02:51 INF provider ready name │
+│ ● tracking       :8090 … ││       =brave latency=121ms             │
+│ ✗ worker-rust crashed 101││  113  08:02:52 INF search q="rust tui" │
+│ ● api              :3001 ││        took=212ms results=4            │
+│ ○ panel        absent    ││  114  08:02:53 INF search q="rust tui" │
+│ ── ad-hoc ────────────── ││        took=213ms results=5            │
+│ ○ old-mock     stopped   ││  115  08:02:54 INF search q="rust tui" │
+│ ● mock-stripe     :12111 ││        took=214ms results=6            │
+│ ── docker ────────────── ││  116  08:02:55 INF search q="rust tui" │
+│ ○ scratch      down      ││        took=215ms results=7            │
+│   └ db         exited    ││  117  08:02:56 INF provider ready name │
+│                          ││       =brave latency=126ms             │
+│                          ││  118  08:02:57 WRN upst ↓ 2 new lines  │
+╰──────────────────────────╯╰────────────────────────────────────────╯
+  OUTPUT  j/k scroll  G follow  / search  n/N match  ? help  q quit   

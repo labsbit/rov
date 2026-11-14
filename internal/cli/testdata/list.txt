@@ -1,0 +1,9 @@
+infra        just infra                   Redis + ClickHouse (docker)
+gateway      just gateway                 search gateway
+tracking     just tracking
+worker-rust  just worker-rust
+api          just api
+panel        just panel
+ad-hoc
+old-mock     node old.js
+mock-stripe  node scripts/mock-stripe.js

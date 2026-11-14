@@ -1,0 +1,20 @@
+ rov ▸ myapp                                    ●5 ▲0 ✗1 ○2  10:14:12 
+╭─ processes ──────────────╮╭─ mock-stripe ──────────────────────────╮
+│ ● infra        up 2/2    ││ running · pid 51002 · up 4m · :12111 … │
+│   ├ clickhouse healthy   ││ ad-hoc · env STRIPE_KEY                │
+│   └ redis      healthy   ││────────────────────────────────────────│
+│ ● gateway          :8080 ││  no output yet                         │
+│ ● tracking       :8090 … ││                                        │
+│ ✗ worker-rust crashed 101││                                        │
+│ ● api              :3001 ││                                        │
+│ ○ panel        absent    ││                                        │
+│ ── ad-hoc ────────────── ││                                        │
+│ ○ old-mock     stopped   ││                                        │
+│▌● mock-stripe     :12111 ││                                        │
+│ ── docker ────────────── ││                                        │
+│ ○ scratch      down      ││                                        │
+│   └ db         exited    ││                                        │
+│                          ││                                        │
+│                          ││                                        │
+╰──────────────────────────╯╰────────────────────────────────────────╯
+  CONFIRM  remove mock-stripe?  y yes  n no                           

@@ -1,0 +1,41 @@
+# Project services.
+# Keep infra first: everything else talks to it.
+
+log_dir: .logs   # gitignored
+
+processes:
+  # Redis + ClickHouse.
+  # Exits once the containers are healthy.
+  infra:
+    cmd: just infra    # compose up --wait
+    docker: search-api-gateway-local
+
+  gateway:
+    # the binary, not go run
+    cmd: "just gateway"
+    env:
+      PORT: "8080"   # matches docs
+      LOG_LEVEL: debug
+    description: >-
+      search gateway,
+      folded
+
+  mock-s3:
+    cmd: go run .
+    cwd: tools/mock-s3
+    env:
+      AWS_REGION: eu-central-1
+    description: local S3 for upload tests
+
+  # --- workers ---
+
+  worker-go: {cmd: just worker-go}   # go
+  worker-rust: { cmd: 'just worker-rust' }
+
+  web:
+    cmd: |
+      cd apps/web
+      npm run dev
+    cwd: apps/web
+
+# trailing note

@@ -1,0 +1,20 @@
+ rov ▸ myapp                                    ●5 ▲0 ✗1 ○2  10:14:12 
+╭─ processes ──────────────╮╭─ infra ────────────────────────────────╮
+│▌● infra        up 2/2    ││ exited · ● up 2/2 · :6379 :8123 · cwd… │
+│   ├ clickhouse healthy   ││ Redis + ClickHouse (docker)            │
+│   └ redis      healthy   ││────────────────────────────────────────│
+│ ● gateway          :8080 ││  no output yet                         │
+│ ● tracking       :8090 … ││                                        │
+│ ✗ worker-rust crashed 101││                                        │
+│ ● api              :3001 ││                                        │
+│ ○ panel        absent    ││                                        │
+│ ── ad-hoc ────────────── ││                                        │
+│ ○ old-mock     stopped   ││                                        │
+│ ● mock-stripe     :12111 ││                                        │
+│ ── docker ────────────── ││                                        │
+│ ○ scratch      down      ││                                        │
+│   └ db         exited    ││                                        │
+│                          ││                                        │
+│                          ││                                        │
+╰──────────────────────────╯╰────────────────────────────────────────╯
+  LIST  space start/stop  r restart  n new  e edit  ? help  q quit    

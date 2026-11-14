@@ -1,0 +1,104 @@
+[
+  {
+    "port": 3001,
+    "addr": "0.0.0.0",
+    "pid": 41530,
+    "comm": "bun",
+    "owner": "api",
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 5432,
+    "addr": "0.0.0.0",
+    "pid": null,
+    "comm": null,
+    "owner": null,
+    "source": "proc",
+    "visible": false
+  },
+  {
+    "port": 6379,
+    "addr": "127.0.0.1",
+    "pid": null,
+    "comm": "docker",
+    "owner": "infra/redis",
+    "source": "docker",
+    "container": "sag-redis",
+    "visible": true
+  },
+  {
+    "port": 8080,
+    "addr": "0.0.0.0",
+    "pid": 41301,
+    "comm": "api-gateway",
+    "owner": "gateway",
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 8080,
+    "addr": "::",
+    "pid": 41301,
+    "comm": "api-gateway",
+    "owner": "gateway",
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 8090,
+    "addr": "127.0.0.1",
+    "pid": 41402,
+    "comm": "tracking-servi",
+    "owner": "tracking",
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 8091,
+    "addr": "127.0.0.1",
+    "pid": 41402,
+    "comm": "tracking-servi",
+    "owner": "tracking",
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 8123,
+    "addr": "127.0.0.1",
+    "pid": null,
+    "comm": "docker",
+    "owner": "infra/clickhouse",
+    "source": "docker",
+    "container": "sag-clickhouse",
+    "visible": true
+  },
+  {
+    "port": 9101,
+    "addr": "0.0.0.0",
+    "pid": 7712,
+    "comm": "worker-search-r",
+    "owner": null,
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 12111,
+    "addr": "127.0.0.1",
+    "pid": 51002,
+    "comm": "node",
+    "owner": "mock-stripe",
+    "source": "proc",
+    "visible": true
+  },
+  {
+    "port": 16379,
+    "addr": "127.0.0.1",
+    "pid": null,
+    "comm": "docker",
+    "owner": null,
+    "source": "docker",
+    "container": "elsewhere-redis",
+    "visible": true
+  }
+]

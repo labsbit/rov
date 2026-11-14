@@ -1,0 +1,18 @@
+# rov.yaml — order here is the order in `rov status` and the TUI
+log_dir: .logs                # default; must be gitignored
+log_max: 64MiB                # default; per file, see Logs
+processes:
+  infra:
+    cmd: just infra
+    description: Redis + ClickHouse (docker)
+    docker: search-api-gateway-local     # compose project this process owns
+  gateway:
+    cmd: just gateway
+    description: search gateway
+  tracking:    { cmd: just tracking }
+  panel:       { cmd: just panel }
+  api:         { cmd: just api }
+  web:         { cmd: just web }
+  worker-go:   { cmd: just worker-go }
+  wr:          { cmd: just worker-rust }
+  fetch-py:    { cmd: 'just fetch-serve "fetch-resi,fetch-mobile"' }

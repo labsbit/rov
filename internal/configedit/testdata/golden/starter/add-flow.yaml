@@ -1,0 +1,19 @@
+# rov.yaml — the processes rov runs for demo.
+# Order here is the order in rov status and the TUI. Edit it by hand, in the
+# TUI (n new, e edit, J/K move, D delete) or with rov config add|set|mv|rm.
+
+log_dir: .logs                # logs and locks; must be gitignored
+log_max: 64MiB                # cap per log file before it rotates
+
+processes:
+  # <name>:                   a-z, 0-9, '-', '_'; also the tmux session name
+  #   cmd: just dev           required; a shell command run in the pane
+  #   cwd: apps/web           optional; relative to this file
+  #   env: { PORT: "3000" }   optional; extra environment
+  #   description: web app    optional; shown in rov list, rov show, the TUI
+  #   docker: my-compose      optional; compose project this process owns
+  #
+  # A process with only a command fits on one line:
+  #   web: { cmd: npm run dev }
+
+  web: { cmd: npm run dev }
